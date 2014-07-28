@@ -1,10 +1,12 @@
 # 1kb-admin-cookbook
 
-TODO: Enter the cookbook description here.
+Configures an "admin" system user with sudo privileges on a server and adds the public SSH keys from a given set of Github users.
+
+This is just an easy way to add a shared admin account with password-less `sudo` to a server.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Ubuntu 12.04LTS
 
 ## Attributes
 
@@ -16,10 +18,16 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['1kb-admin']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['1kb-admin']['user_name']</tt></td>
+    <td>String</td>
+    <td>name of the user account to configure</td>
+    <td><tt>admin</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['1kb-admin']['github_users']</tt></td>
+    <td>Array of strings</td>
+    <td>list of Github usernames for which to pull public keys</td>
+    <td><tt>[]</tt></td>
   </tr>
 </table>
 
@@ -48,4 +56,4 @@ Include `1kb-admin` in your node's `run_list`:
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Zachary Danger Campbell (<zcampbell@1000bulbs.com>)

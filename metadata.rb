@@ -6,3 +6,4 @@ description      'Installs/Configures 1kb-admin'
 long_description 'Installs/Configures 1kb-admin'
 version          '0.1.0'
 
+depends "user"
